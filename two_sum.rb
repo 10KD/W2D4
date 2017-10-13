@@ -38,12 +38,10 @@ arr = [0, 1, 5, 7]
 
 def two_sum?(arr, target_sum)
   hash = Hash.new(0)
-  (0..target_sum).each do |num|
+  arr.each do |num|
     diff = target_sum - num 
-    hash[diff] = num 
+    hash[num] = diff
+    return true if hash[diff] 
   end
-  hash.each do |num1, num2|
-  
-  end
-
+  false
 end
